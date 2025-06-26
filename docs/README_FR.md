@@ -16,6 +16,7 @@ Ce projet constitue une base pour une application ESP32 permettant la gestion co
 2. Se placer à la racine du projet puis exécuter `idf.py menuconfig` pour ajuster la configuration.
 3. Compiler et flasher avec `idf.py flash monitor`.
 
+
 ### Dépendances
 
 Ce projet s'appuie sur [LVGL](https://lvgl.io) pour l'interface graphique. Pour
