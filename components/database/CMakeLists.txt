@@ -1,2 +1,3 @@
 idf_component_register(SRCS "database.c"
-                       INCLUDE_DIRS ".")
+                       INCLUDE_DIRS "."
+                       REQUIRES sqlite3)
