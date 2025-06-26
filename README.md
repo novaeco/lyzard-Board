@@ -16,8 +16,12 @@ Reportez-vous à `docs/README_FR.md` pour plus d'informations.
 
 ## Pré-requis supplémentaires
 
+Le composant graphique [LVGL](https://lvgl.io) n'est pas inclus directement.
+Installez-le via le gestionnaire de composants ESP‑IDF :
+
+
+## Pré-requis supplémentaires
 
 ```bash
 idf.py add-dependency lvgl/lvgl
-```
 
