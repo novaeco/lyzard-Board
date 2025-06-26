@@ -1,3 +1,7 @@
-idf_component_register(SRCS "main.c"
-                       INCLUDE_DIRS "."
-                       REQUIRES database ui legal)
+# main/CMakeLists.txt
+
+idf_component_register(
+    SRCS           "main.c"
+    INCLUDE_DIRS   .
+    PRIV_REQUIRES  nvs_flash database ui legal
+)

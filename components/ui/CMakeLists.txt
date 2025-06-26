@@ -1,16 +1,5 @@
-
 idf_component_register(
-    SRCS "ui.c"
-    INCLUDE_DIRS "."
-    PRIV_REQUIRES lvgl__lvgl
+    SRCS           "ui.c"
+    INCLUDE_DIRS   .
+    REQUIRES       lvgl
 )
-
-idf_component_register(SRCS "ui.c"
-                       INCLUDE_DIRS "."
-                       PRIV_REQUIRES lvgl__lvgl)
-
-
-                       INCLUDE_DIRS "."
-                       REQUIRES lvgl)
-
-                       INCLUDE_DIRS ".")
