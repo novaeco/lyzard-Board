@@ -21,7 +21,10 @@ Only a minimal implementation is provided. The full documentation is available i
 and outlines the following quick steps:
 
 1. Install ESP‑IDF and set up the environment.
-2. Run `idf.py menuconfig` to adjust the configuration.
+2. (Optional) run `idf.py set-target esp32s3` if the target is not already set.
+   A `sdkconfig.defaults` file at the repository root provides recommended
+   options for the ESP32‑S3 and LVGL. These defaults are applied the first time
+   `idf.py menuconfig` is executed.
 3. Build and flash with `idf.py flash monitor`.
 
 ## Environment setup
