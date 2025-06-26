@@ -1,0 +1,29 @@
+# ESP-IDF build output
+build/
+*.bin
+*.elf
+*.map
+
+# SDK configuration generated during build
+sdkconfig
+sdkconfig.old
+sdkconfig.*
+!sdkconfig.defaults
+
+# Compiler artifacts
+*.o
+*.d
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE directories and files
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+
+# Backup and swap files
+*~
+*.swp
