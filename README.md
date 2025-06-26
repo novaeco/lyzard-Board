@@ -24,3 +24,7 @@ Installez-le via le gestionnaire de composants ESP‑IDF :
 
 ```bash
 idf.py add-dependency lvgl/lvgl
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
