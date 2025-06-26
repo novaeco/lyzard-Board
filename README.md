@@ -1,29 +1,52 @@
 # Lyzard Board
 
-Ce projet fournit une structure de base pour le développement d'une application ESP32 (ESP-IDF) destinée à la gestion d'un élevage de reptiles. Il s'appuie sur LVGL pour l'interface tactile, une base de données locale et des modules spécifiques permettant la génération automatique des documents légaux français (CERFA, I-FAP, CITES, etc.).
+This repository provides a minimal ESP‑IDF project intended as a starting point for a reptile breeding management application. It uses [LVGL](https://lvgl.io) for the touch interface, a local database and modules for generating French legal documents (CERFA, I‑FAP, CITES, etc.).
 
-**Fonctionnalités prévues** :
+**Planned features**
 
-- Gestion des animaux, terrariums, cycles de vie et événements sanitaires.
-- Stocks et transactions avec création des documents légaux correspondants.
-- Interface graphique LVGL (800x480, thème clair/sombre, multi-langues).
-- Authentification locale et chiffrement des données sensibles.
-- Export/Import CSV ou JSON et sauvegarde sur carte SD ou via Wi-Fi.
+- Manage animals, terrariums, life cycles and health events.
+- Inventory and transactions with the related legal paperwork.
+- LVGL graphical interface (800×480, light/dark theme, multi‑language).
+- Local authentication and encryption of sensitive data.
+- CSV/JSON import/export and backup to SD card or via Wi‑Fi.
 
-Ce dépôt propose uniquement une implémentation minimale servant de point de départ.
-Reportez-vous à `docs/README_FR.md` pour plus d'informations.
+Only a minimal implementation is provided. The full documentation is available in `docs/README_FR.md` (French). In short it explains the project tree:
 
-## Pré-requis supplémentaires
+- `main/` – application entry point
+- `components/database/` – SQLite or file‑based storage
+- `components/ui/` – LVGL user interface
+- `components/legal/` – tools for CERFA, I‑FAP and CITES forms
+- `docs/` – project documentation
 
-Le composant graphique [LVGL](https://lvgl.io) n'est pas inclus directement.
-Installez-le via le gestionnaire de composants ESP‑IDF :
+and outlines the following quick steps:
 
+1. Install ESP‑IDF and set up the environment.
+2. Run `idf.py menuconfig` to adjust the configuration.
+3. Build and flash with `idf.py flash monitor`.
 
+## Environment setup
 
-## Pré-requis supplémentaires
+Follow the [ESP‑IDF getting started guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/) to install the tools and export the environment variables (e.g. `IDF_PATH`). Open a terminal where `idf.py` is available before using the commands below.
+
+## Fetching LVGL
+
+The LVGL component is not included in the repository. Fetch it with the component manager:
 
 ```bash
 idf.py add-dependency lvgl/lvgl
+```
+
+This downloads the component and updates `dependencies.lock`.
+
+## Configure, build and flash
+
+From the project root execute:
+
+```bash
+idf.py menuconfig      # configure the project
+idf.py build           # compile the firmware
+idf.py flash monitor   # flash then open the serial monitor
+```
 
 ## License
 
