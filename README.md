@@ -12,3 +12,12 @@ Ce projet fournit une structure de base pour le développement d'une application
 
 Ce dépôt propose uniquement une implémentation minimale servant de point de départ.
 Reportez-vous à `docs/README_FR.md` pour plus d'informations.
+
+
+## Pré-requis supplémentaires
+
+
+```bash
+idf.py add-dependency lvgl/lvgl
+```
+
